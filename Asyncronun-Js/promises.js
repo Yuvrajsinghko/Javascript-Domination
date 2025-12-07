@@ -23,24 +23,23 @@ function asyncFun2() {
 }
 
 //Promise Chain
-console.log("Fetching data....1");
+// console.log("Fetching data....1");
 
-let p1 = asyncFun();
-p1.then((res) => {
-  console.log(res);
-  console.log("Fetching data....2");
-  let p2 = asyncFun2();
-  p2.then((res) => {
-    console.log(res);
-  });
-});
+// let p1 = asyncFun();
+// p1.then((res) => {
+//   console.log(res);
+//   console.log("Fetching data....2");
+//   let p2 = asyncFun2();
+//   p2.then((res) => {
+//     console.log(res);
+//   });
+// });
 
 function getData(dataId, getNextData) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("data", dataId);
       resolve("success");
-      
     }, 5000);
   });
 }
@@ -57,3 +56,17 @@ function getPromise() {
 // result.catch((err) => {
 //   console.log("promise fulfilled", err);
 // });
+
+function api() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("weather data");
+      resolve(200);
+    }, 2000);
+  });
+}
+
+(async function getWeatherData() {
+  await api();
+  await api();
+})();
