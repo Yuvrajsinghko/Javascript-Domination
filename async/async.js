@@ -7,3 +7,6 @@ let a = () => {
 };
 
 setTimeout(a, 2000);
+
+console.log("hoolp");
+
