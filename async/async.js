@@ -17,25 +17,27 @@
 //   });
 
 // calculator();
-function outerFun() {
-  function innerFun() {
-    console.log("hii");
-  }
-  innerFun();
-}
+// function outerFun() {
+//   function innerFun() {
+//     console.log("hii");
+//   }
+//   innerFun();
+// }
 function getData(dataId, getNextData) {
-  setTimeout(() => {
-    console.log("data", dataId);
-    if (getNextData) {
-      getNextData();
-    }
-  }, 2000);
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+      console.log("data", dataId);
+      if (getNextData) {
+        getNextData();
+      }
+    }, 2000);
+  });
 }
 
-getData(1,()=>{
-    getData(2,()=>{
-        getData(3,()=>{
-            getData(4)
-        })
-    })
-})
+// getData(1, () => {
+//   getData(2, () => {
+//     getData(3, () => {
+//       getData(4);
+//     });
+//   });
+// });
