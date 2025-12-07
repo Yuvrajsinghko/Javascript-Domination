@@ -21,6 +21,8 @@ function asyncFun2() {
     }, 4000);
   });
 }
+
+//Promise Chain
 console.log("Fetching data....1");
 
 let p1 = asyncFun();
@@ -38,9 +40,7 @@ function getData(dataId, getNextData) {
     setTimeout(() => {
       console.log("data", dataId);
       resolve("success");
-      if (getNextData) {
-        getNextData();
-      }
+      
     }, 5000);
   });
 }
