@@ -8,17 +8,30 @@ function asyncFun() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("hehee timeout");
-    }, 2000);
+      resolve("success");
+    }, 4000);
   });
 }
 
+function asyncFun2() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("hehee timeout second");
+      resolve("success");
+    }, 4000);
+  });
+}
+console.log("Fetching data....1");
 
-
-
-
-
-
-
+let p1 = asyncFun();
+p1.then((res) => {
+  console.log(res);
+  console.log("Fetching data....2");
+  let p2 = asyncFun2();
+  p2.then((res) => {
+    console.log(res);
+  });
+});
 
 function getData(dataId, getNextData) {
   return new Promise((resolve, reject) => {
@@ -39,8 +52,8 @@ function getPromise() {
   });
 }
 
-let result = getPromise();
+// let result = getPromise();
 
-result.catch((err) => {
-  console.log("promise fulfilled", err);
-});
+// result.catch((err) => {
+//   console.log("promise fulfilled", err);
+// });
