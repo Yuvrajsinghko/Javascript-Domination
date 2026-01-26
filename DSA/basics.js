@@ -9,7 +9,32 @@ let c;
 
 //Second Method
 
-a = a + b;
-b = a - b;
-a = a - b;
-console.log(a, b);
+// a = a + b;
+// b = a - b;
+// a = a - b;
+// console.log(a,b);
+
+//Third Method (Destructuring)
+
+// [a,b]=[b,a]
+// console.log(a,b);
+
+// Operators //
+
+// console.log(Math.floor(42/5));
+
+// console.log(8%24);
+
+//OTP 6 Digit
+
+
+console.log(Math.trunc((Math.random()*10)+1));
+
+
+
+
+
+
+
+
+
