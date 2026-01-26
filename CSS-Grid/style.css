@@ -3,15 +3,19 @@ body{
 }
 
 .grid-container{
-    height: 98vh;
+    /* height: 98vh; */
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
     gap: 0.5vw;
+    justify-items: center;
+    align-items: start;
 
 }
 
 .item{
+    height: 100px;
+    width: 100px;
     padding: 2rem;
     background-color: darkgoldenrod;
     text-align: center;
