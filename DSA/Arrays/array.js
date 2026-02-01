@@ -97,24 +97,24 @@
 // }
 
 // Left Rotation by one place
-let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-
-let cpy = arr[0];
-
-for (let i = 0; i < arr.length - 1; i++) {
-  arr[i] = arr[i + 1];
-}
-arr[arr.length - 1] = cpy;
-
-//Right Rotation By one place
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
-// let cpy = arr[arr.length - 1];
+// let cpy = arr[0];
 
-// for (let i = arr.length -1; i >0; i--) {
-//   arr[i] = arr[i - 1];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
 // }
-// arr[0] = cpy;
+// arr[arr.length - 1] = cpy;
+
+//Right Rotation By one place
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+let cpy = arr[arr.length - 1];
+
+for (let i = arr.length -1; i >0; i--) {
+  arr[i] = arr[i - 1];
+}
+arr[0] = cpy;
 
 // left rotation of  array elements by K times
 
