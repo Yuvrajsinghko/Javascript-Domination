@@ -149,33 +149,33 @@
 
 //Efficient  approach to solve rotation ky k times problem
 
-let arr = [1, 2, 3, 4, 5];
-let temp = [];
-let prompt = require("prompt-sync")();
-let k = Number(prompt("Enter number to rotate by:"));
-k = k % arr.length;
-
-for (let i = 0; i < arr.length; i++) {
-  temp[i] = arr[(i + k) % arr.length];
-}
-for (let i = arr.length-1; i > 0; i--) {
-  temp[i] = arr[(i+k) % arr.length];
-}
-
-//two pointer reverse most efficient
-// let arr = [1, 2, 3, 4, 5, 6];
-
+// let arr = [1, 2, 3, 4, 5];
+// let temp = [];
 // let prompt = require("prompt-sync")();
 // let k = Number(prompt("Enter number to rotate by:"));
-// reverse(0, k - 1);
-// reverse(k, arr.length - 1);
-// reverse(0, arr.length - 1);
-// function reverse(i, j) {
-//   while (i < j) {
-//     let temp = arr[i];
-//     arr[i] = arr[j];
-//     arr[j] = temp;
-//     i++;
-//     j--;
-//   }
+// k = k % arr.length;
+
+// for (let i = 0; i < arr.length; i++) {
+//   temp[i] = arr[(i + k) % arr.length];
 // }
+// for (let i = arr.length-1; i > 0; i--) {
+//   temp[i] = arr[(i+k) % arr.length];
+// }
+
+//two pointer reverse most efficient
+let arr = [1, 2, 3, 4, 5, 6];
+
+let prompt = require("prompt-sync")();
+let k = Number(prompt("Enter number to rotate by:"));
+reverse(0, k - 1);
+reverse(k, arr.length - 1);
+reverse(0, arr.length - 1);
+function reverse(i, j) {
+  while (i < j) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    i++;
+    j--;
+  }
+}
