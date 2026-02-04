@@ -230,41 +230,41 @@
 
 //Sort nums
 
-let nums = [0, 1, 2, 0,1,2,0,0,1];
+// let nums = [0, 1, 2, 0,1,2,0,0,1];
 
-let i = 0;
-let j = 0;
-let k = nums.length - 1;
+// let i = 0;
+// let j = 0;
+// let k = nums.length - 1;
 
-while (i <= k) {
-  if (nums[i] === 0) {
-    let temp = nums[i];
-    nums[i] = nums[j];
-    nums[j] = temp;
-    i++;
-    j++;
-  } else if (nums[i] === 2) {
-    let temp = nums[i];
-    nums[i] = nums[k];
-    nums[k] = temp;
-    k--;
-  } else {
-    i++;
-  }
-}
+// while (i <= k) {
+//   if (nums[i] === 0) {
+//     let temp = nums[i];
+//     nums[i] = nums[j];
+//     nums[j] = temp;
+//     i++;
+//     j++;
+//   } else if (nums[i] === 2) {
+//     let temp = nums[i];
+//     nums[i] = nums[k];
+//     nums[k] = temp;
+//     k--;
+//   } else {
+//     i++;
+//   }
+// }
 
 //Maximum Sub Array
 
-// let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 
-// let max = -Infinity;
-// let sum = 0;
+let max = -Infinity;
+let sum = 0;
 
-// for (let i = 0; i < nums.length; i++) {
-//   sum += nums[i];
-//   max = Math.max(max, sum);
-//   if (sum < 0) sum = 0;
-// }
+for (let i = 0; i < nums.length; i++) {
+  sum += nums[i];
+  max = Math.max(max, sum);
+  if (sum < 0) sum = 0;
+}
 
 
 
