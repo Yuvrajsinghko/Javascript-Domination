@@ -255,16 +255,29 @@
 
 //Maximum Sub Array
 
-let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 
-let max = -Infinity;
-let sum = 0;
+// let max = -Infinity;
+// let sum = 0;
 
-for (let i = 0; i < nums.length; i++) {
-  sum += nums[i];
-  max = Math.max(max, sum);
-  if (sum < 0) sum = 0;
+// for (let i = 0; i < nums.length; i++) {
+//   sum += nums[i];
+//   max = Math.max(max, sum);
+//   if (sum < 0) sum = 0;
+// }
+
+//Majority Element
+
+let nums = [2, 2, 1, 1, 1, 2, 2];
+
+let ans = nums[0];
+let count = 1;
+
+for (let i = 1; i < nums.length; i++) {
+  if (count === 0) {
+    ans = nums[i];
+    count = 1;
+  } else if (nums[i] === ans) count++;
+  else count--;
 }
-
-
 
