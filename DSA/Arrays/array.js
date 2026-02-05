@@ -268,16 +268,34 @@
 
 //Majority Element
 
-let nums = [2, 2, 1, 1, 1, 2, 2];
+// let nums = [2, 2, 1, 1, 1, 2, 2];
 
-let ans = nums[0];
-let count = 1;
+// let ans = nums[0];
+// let count = 1;
 
-for (let i = 1; i < nums.length; i++) {
-  if (count === 0) {
-    ans = nums[i];
-    count = 1;
-  } else if (nums[i] === ans) count++;
-  else count--;
-}
+// for (let i = 1; i < nums.length; i++) {
+//   if (count === 0) {
+//     ans = nums[i];
+//     count = 1;
+//   } else if (nums[i] === ans) count++;
+//   else count--;
+// }
+
+//Trapping Rain water
+
+
+ let left = new Array(height.length);
+    let right = new Array(height.length);
+
+    let maxLeft = height[0], maxRight = height[height.length - 1]
+    left[0] = maxLeft, right[right.length - 1] = maxRight;
+
+    for (let i = 1; i < height.length; i++) {
+        maxLeft = Math.max(height[i], maxLeft)
+        left[i] = maxLeft;
+    }
+    for (let i  = height.length - 2; i >= 0; i--) {
+        maxRight = Math.max(height[i], maxRight)
+        right[i] = maxRight;
+    }
 
