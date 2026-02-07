@@ -11,21 +11,21 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
 //Check Palindrom
 
-// if (newStr === str) return console.log(true);
-// else return console.log(false);
-// let j = str.length - 1;
-// let i = 0;
+if (newStr === str) return console.log(true);
+else return console.log(false);
+let j = str.length - 1;
+let i = 0;
 
-// let isPalindrom = true;
+let isPalindrom = true;
 
-// while (i < j) {
-//   if (str.charAt(i) != str.charAt(j)) {
-//     isPalindrom = false;
-//     break;
-//   }
-//   i++;
-//   j--;
-// }
+while (i < j) {
+  if (str.charAt(i) != str.charAt(j)) {
+    isPalindrom = false;
+    break;
+  }
+  i++;
+  j--;
+}
 
 // if(isPalindrom) console.log("Palindrom");
 // else console.log("Not Palindrom");
