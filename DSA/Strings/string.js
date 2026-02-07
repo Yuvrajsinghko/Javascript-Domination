@@ -33,32 +33,32 @@ for (let i = str.length - 1; i >= 0; i--) {
 //Change Case
 //65-90
 
-let changeCase = "";
-let finalAns = "";
-for (let i = 0; i < changeCase.length; i++) {
-  let ch = changeCase.charCodeAt(i);
-  if (ch >= 65 && ch <= 90) {
-    finalAns += String.fromCharCode(ch + 32);
-  } else if (ch >= 97 && ch <= 122) {
-    finalAns += String.fromCharCode(ch - 32);
-  }
-}
+// let changeCase = "";
+// let finalAns = "";
+// for (let i = 0; i < changeCase.length; i++) {
+//   let ch = changeCase.charCodeAt(i);
+//   if (ch >= 65 && ch <= 90) {
+//     finalAns += String.fromCharCode(ch + 32);
+//   } else if (ch >= 97 && ch <= 122) {
+//     finalAns += String.fromCharCode(ch - 32);
+//   }
+// }
 
 //Count Character Count in a  string using bit map
 
-// let s = prompt("Enter a string:");
+let s = prompt("Enter a string:");
 
-// let arr = new Array(129).fill(0);
+let arr = new Array(129).fill(0);
 
-// for (let i = 0; i < s.length; i++) {
-//   let idx = s.charCodeAt(i);
-//   arr[idx] += 1;
-// }
+for (let i = 0; i < s.length; i++) {
+  let idx = s.charCodeAt(i);
+  arr[idx] += 1;
+}
 
-// for (let i = 0; i < s.length; i++) {
-//   let ch = s.charCodeAt(i);
+for (let i = 0; i < s.length; i++) {
+  let ch = s.charCodeAt(i);
   
-//   console.log(s[i] + " appears at " + arr[ch] + " times");
-// }
+  console.log(s[i] + " appears at " + arr[ch] + " times");
+}
 
 // console.log(arr);
