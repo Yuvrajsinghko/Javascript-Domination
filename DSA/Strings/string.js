@@ -11,21 +11,21 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
 //Check Palindrom
 
-if (newStr === str) return console.log(true);
-else return console.log(false);
-let j = str.length - 1;
-let i = 0;
+// if (newStr === str) return console.log(true);
+// else return console.log(false);
+// let j = str.length - 1;
+// let i = 0;
 
-let isPalindrom = true;
+// let isPalindrom = true;
 
-while (i < j) {
-  if (str.charAt(i) != str.charAt(j)) {
-    isPalindrom = false;
-    break;
-  }
-  i++;
-  j--;
-}
+// while (i < j) {
+//   if (str.charAt(i) != str.charAt(j)) {
+//     isPalindrom = false;
+//     break;
+//   }
+//   i++;
+//   j--;
+// }
 
 // if(isPalindrom) console.log("Palindrom");
 // else console.log("Not Palindrom");
@@ -33,16 +33,16 @@ while (i < j) {
 //Change Case
 //65-90
 
-// let changeCase = "";
-// let finalAns = "";
-// for (let i = 0; i < changeCase.length; i++) {
-//   let ch = changeCase.charCodeAt(i);
-//   if (ch >= 65 && ch <= 90) {
-//     finalAns += String.fromCharCode(ch + 32);
-//   } else if (ch >= 97 && ch <= 122) {
-//     finalAns += String.fromCharCode(ch - 32);
-//   }
-// }
+let changeCase = "";
+let finalAns = "";
+for (let i = 0; i < changeCase.length; i++) {
+  let ch = changeCase.charCodeAt(i);
+  if (ch >= 65 && ch <= 90) {
+    finalAns += String.fromCharCode(ch + 32);
+  } else if (ch >= 97 && ch <= 122) {
+    finalAns += String.fromCharCode(ch - 32);
+  }
+}
 
 //Count Character Count in a  string using bit map
 
