@@ -36,14 +36,12 @@ function tem(n) {
 
 function add(n) {
   if (n === 1) return 1;
-
   return n + add(n - 1);
 }
 
 //Factorial of N natural numbers.
 function fact(n) {
   if (n == 1) return n;
-
   return n * fact(n - 1);
 }
 
@@ -52,7 +50,6 @@ function fact(n) {
 //Fibonachi Series useing iterative
 
 let n = 10;
-
 let first = 0,
   second = 1;
 // process.stdout.write(first + " " + second);
@@ -64,18 +61,17 @@ for (let i = 1; i <= n - 2; i++) {
   process.stdout.write(third+" ");
 }
 
-//Fibonachi Series useing recursion
+//Fibonacchi Series useing recursion
 
 function fibo(n,first,second){
   if (n==0) return ;
   let third = first+second;
   process.stdout.write(third+" ");
   fibo(n-1,second,third);
-
-
 }
-
 let m = 10;
-fibo(m-2,0,1)
+fibo(m-2,0,1);
+
+
 
 
