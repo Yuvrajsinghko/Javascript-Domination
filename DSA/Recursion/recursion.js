@@ -14,7 +14,6 @@
 //   console.log("Kuch kar lo be");
 // }
 
-
 //Print natural number from n to 1.
 function temp(n) {
   if (n == 0) return;
@@ -22,8 +21,8 @@ function temp(n) {
   temp(n - 1);
 }
 
-temp(5);
-console.log("");
+// temp(5);
+// console.log("");
 //Print natural number from 1 to n.
 function tem(n) {
   if (n == 0) return;
@@ -31,4 +30,22 @@ function tem(n) {
   console.log(n);
 }
 
-tem(5);
+// tem(5);
+
+// Sum of N natural numbers.
+
+function add(n) {
+  if (n === 1) return 1;
+
+  return n + add(n - 1);
+}
+
+//Factorial of N natural numbers.
+function fact(n) {
+  if (n == 1) return n;
+
+  return n * fact(n - 1);
+}
+
+console.log(fact(6));
+
