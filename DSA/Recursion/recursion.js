@@ -47,5 +47,35 @@ function fact(n) {
   return n * fact(n - 1);
 }
 
-console.log(fact(6));
+// console.log(fact(6));
+
+//Fibonachi Series useing iterative
+
+let n = 10;
+
+let first = 0,
+  second = 1;
+// process.stdout.write(first + " " + second);
+
+for (let i = 1; i <= n - 2; i++) {
+  let third = first + second;
+  first = second;
+  second=third;
+  process.stdout.write(third+" ");
+}
+
+//Fibonachi Series useing recursion
+
+function fibo(n,first,second){
+  if (n==0) return ;
+  let third = first+second;
+  process.stdout.write(third+" ");
+  fibo(n-1,second,third);
+
+
+}
+
+let m = 10;
+fibo(m-2,0,1)
+
 
