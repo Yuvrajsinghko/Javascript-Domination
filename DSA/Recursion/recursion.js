@@ -58,10 +58,10 @@ for (let i = 1; i <= n - 2; i++) {
   let third = first + second;
   first = second;
   second=third;
-  process.stdout.write(third+" ");
+  // process.stdout.write(third+" ");
 }
 
-//Fibonacchi Series useing recursion
+//Fibonacchi Series using recursion
 
 function fibo(n,first,second){
   if (n==0) return ;
@@ -70,8 +70,18 @@ function fibo(n,first,second){
   fibo(n-1,second,third);
 }
 let m = 10;
-fibo(m-2,0,1);
+// fibo(m-2,0,1);
 
 
+
+//Sum upto N term
+
+function fib(n){
+  if (n==0 || n==1) return n;
+
+  return fib(n-1) +fib(n-2);
+}
+
+console.log(fib(7));
 
 
