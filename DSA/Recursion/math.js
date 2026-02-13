@@ -24,8 +24,6 @@ while (a != b) {
   else b = b - a;
 }
 
-
-
 //Recursive Way
 function Gcd(a, b) {
   if (a == b) return a;
@@ -33,4 +31,15 @@ function Gcd(a, b) {
   else b = b - a;
   return Gcd(a, b);
 }
-console.log(Gcd(1000, 1));
+
+//Optmized Approach for GCD of two numbers.
+
+function gcd(a,b){
+    if (b==0) return a;
+    return gcd(b,a%b)
+}
+
+console.log(gcd(14,16));
+
+
+
