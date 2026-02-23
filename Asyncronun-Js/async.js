@@ -2,6 +2,8 @@
 // console.log("how are you");
 // console.log("Hi bexi");
 
+// const { log } = require("async");
+
 // let a = () => {
 //   console.log("time out");
 // };
@@ -23,16 +25,16 @@
 //   }
 //   innerFun();
 // }
-function getData(dataId, getNextData) {
-  return new Promise((resolve,reject) => {
-    setTimeout(() => {
-      console.log("data", dataId);
-      if (getNextData) {
-        getNextData();
-      }
-    }, 2000);
-  });
-}
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve,reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataId);
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 2000);
+//   });
+// }
 
 // getData(1, () => {
 //   getData(2, () => {
@@ -41,3 +43,10 @@ function getData(dataId, getNextData) {
 //     });
 //   });
 // });
+
+console.log("hey1");
+console.log("hey2");
+setTimeout(() => {
+  console.log("hey3");
+}, 2000);
+console.log("hey4");
