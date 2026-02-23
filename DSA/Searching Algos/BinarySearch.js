@@ -16,4 +16,4 @@ function binarySerch(arr, left, right, target) {
   return -1;
 }
 
-console.log(binarySerch(arr, 0, arr.length - 1, 1250));
+console.log(binarySerch(arr, 0, arr.length - 1, 101));
