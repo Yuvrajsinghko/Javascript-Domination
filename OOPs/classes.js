@@ -87,15 +87,13 @@
 // let u1 = new User("Yuvraj", "Bhopal", "Yuv69", "yu@gmail.com", "manager");
 // u1.write("Hey");
 
-
 // //Object.create
-
 
 // let coffee = {
 //   color:"Dark",
 //   drink:function(){
 //     console.log("Drink drink drink");
-    
+
 //   }
 // }
 
@@ -105,15 +103,36 @@
 // arrbaite.drink();
 // console.log(arrbaite);
 
+// const m1 = {
+//   fname: "Yuvraj",
+//   lname: "Singh",
+//   getFullname() {
+//     return `${this.fname} ${this.lname}`;
+//   },
+// };
 
-const m1 = {
-  fname:"Yuvraj",
-  lname:"Singh",
-  getFullname(){
-    return `${this.fname} ${this.lname}`
-  }
+// const m2 = Object.create(m1);
+
+// console.log(m1.fname);
+
+
+// m2.__proto__.fname="King";
+
+// console.log("p1 after",m1.fname);
+
+
+let p1 = {
+  xp1:"I am inside P1"
 }
 
-const m2 = Object.create(m1);
+let p2 = {
+  xp2:"I am inside P2",
+  __proto__:p1
+}
+let p3 = {
+  xp3:"I am inside P3",
+  __proto__:p2
+}
 
-console.log(m2.fname);
+
+
